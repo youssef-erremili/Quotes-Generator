@@ -11,13 +11,20 @@
 <body class="bg-gray-200 flex justify-center items-center">
     <main>
         <div>
-            <div class="boxQuote bg-gray-100 text-center w-96 shadow-md block rounded h-80">
+            <div class="boxQuote bg-gray-100 text-center w-96 shadow-md rounded">
                 <h1 class="capitalize text-4xl py-6 font-semibold text-gray-900">quotes generator</h1>
-                <div class="shown w-full h-full">
-                    <p class="text-2xl italic my-4 p-8 text-gray-700">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quo possimus animi commodi
-                        placeat"
-                    </p>
+                <div class="shown w-full">
+                    <p id="quote" class="text-2xl italic my-4 px-8 py-4 text-gray-700"></p>
+                    <span id="author" class="capitalize float-right mx-10 text-indigo-700 text-lg font-bold text-right"></span>
+                    <div class="bottom border-t-2 my-12 border-gray-00 flex justify-between py-4 px-20 items-center">
+                        <button type="button" class="" id="saveBtn">
+                            <ion-icon class="text-lg py-2 mx-2" style="font-size: 30px;" name="heart-outline"></ion-icon>
+                        </button>
+                        <button type="button" class="flex justify-center items-center capitalize text-white px-4 rounded-3xl bg-blue-500">
+                            <ion-icon class="text-lg py-2 mx-2" style="font-size: 25px;" name="refresh"></ion-icon>
+                            <span>get new quote</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,6 +32,7 @@
 
     <script src="assets/main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>
