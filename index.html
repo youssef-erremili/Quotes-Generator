@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body class="bg-gray-200 flex justify-center items-center">
+<body class="overflow-x-hidden bg-gray-200 flex justify-center items-center">
     <main>
         <div>
             <div class="boxQuote bg-gray-100 text-center w-96 shadow-md rounded">
@@ -20,7 +20,7 @@
                         <button type="button" class="" id="saveBtn">
                             <ion-icon class="text-lg py-2 mx-2" style="font-size: 30px;" name="heart-outline"></ion-icon>
                         </button>
-                        <button type="button" class="flex justify-center items-center capitalize text-white px-4 rounded-3xl bg-blue-500">
+                        <button type="button" id="generatBtn" class="flex justify-center items-center capitalize text-white px-4 rounded-3xl bg-blue-500">
                             <ion-icon class="text-lg py-2 mx-2" style="font-size: 25px;" name="refresh"></ion-icon>
                             <span>get new quote</span>
                         </button>
@@ -28,8 +28,20 @@
                 </div>
             </div>
         </div>
+        <div class="favoriteQuote bg-white w-96">
+            <table id="table" class="w-full my-10 text-sm text-left rtl:text-right text-gray-500">
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <td class="capitalize text-white px-6 py-3">author</td>
+                    <td class="capitalize text-white px-6 py-3">quote</td>
+                    <td class="capitalize text-white px-6 py-3">status</td>
+                </tr>
+            </table>
+        </div>
     </main>
 
+
+
+    
     <script src="assets/main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
