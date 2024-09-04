@@ -6,6 +6,9 @@ let author = document.getElementById("author");
 let saveBtn = document.getElementById("saveBtn");
 let generatBtn = document.getElementById("generatBtn");
 let table = document.getElementById("table");
+let heart = document.getElementById("heart");
+let x = ""
+let y = ""
 
 // Function to fetch the quote
 function fetchQuote() {
@@ -28,8 +31,9 @@ function fetchQuote() {
         .then(data => {
             quote.innerText = `"${data[0].quote}"`;
             author.innerText = `-${data[0].author}`;
-            saveBtn.dataset.author = data[0].author;
-            saveBtn.dataset.quote = data[0].quote;
+            x = data[0].author
+            y = data[0].quote
+            heart.name = "heart-outline"
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -71,12 +75,29 @@ function addQuoteToTable(authorText, quoteText) {
 function deleteRowTable(button) {
     let row = button.closest('tr');
     row.remove();
+    heart.name = "heart-outline"
 }
 
 saveBtn.addEventListener("click", () => {
-    let authorText = saveBtn.dataset.author;
-    let quoteText = saveBtn.dataset.quote;
-    addQuoteToTable(authorText, quoteText);
+    if (heart.name == "heart-outline") {
+        heart.name = "heart"
+        let authorText = x;
+        let quoteText = y;
+        addQuoteToTable(authorText, quoteText);
+        let notyf = new Notyf();
+        notyf.success({
+            message: 'Has been saved the quote successfully',
+            duration: 3000,
+        })
+    }
+    else{
+        // console.log("already saved");
+        let notyf = new Notyf();
+        notyf.error({
+            message: 'The quote is already Saved',
+            duration: 3000,
+        })
+    }
 });
 
 // Generate a new quote when the page is loaded

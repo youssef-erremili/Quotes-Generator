@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quotes Generator - Errehub</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
 
 <body class="overflow-x-hidden bg-gray-200 flex justify-center items-center">
-    <main>
+    <main class="my-10">
         <div>
             <div class="boxQuote bg-gray-100 text-center w-96 shadow-md rounded">
                 <h1 class="capitalize text-4xl py-6 font-semibold text-gray-900">quotes generator</h1>
                 <div class="shown w-full">
-                    <p id="quote" class="text-2xl italic my-4 px-8 py-4 text-gray-700"></p>
-                    <span id="author" class="capitalize float-right mx-10 text-indigo-700 text-lg font-bold text-right"></span>
+                    <p id="quote" class="text-2xl italic font-sans my-4 px-8 py-4 text-gray-700"></p>
+                    <span id="author" class="capitalize float-right mx-10 text-indigo-700 text-lg font-bold"></span>
                     <div class="bottom border-t-2 my-12 border-gray-00 flex justify-between py-4 px-20 items-center">
                         <button type="button" class="" id="saveBtn">
-                            <ion-icon class="text-lg py-2 mx-2" style="font-size: 30px;" name="heart-outline"></ion-icon>
+                            <ion-icon class="text-lg py-2 mx-2" id="heart" style="font-size: 30px;" name="heart-outline"></ion-icon>
                         </button>
                         <button type="button" id="generatBtn" class="flex justify-center items-center capitalize text-white px-4 rounded-3xl bg-blue-500">
                             <ion-icon class="text-lg py-2 mx-2" style="font-size: 25px;" name="refresh"></ion-icon>
@@ -32,19 +33,16 @@
             <table id="table" class="w-full my-10 text-sm text-left rtl:text-right text-gray-500">
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <td class="capitalize text-white px-6 py-3">author</td>
-                    <td class="capitalize text-white px-6 py-3">quote</td>
-                    <td class="capitalize text-white px-6 py-3">status</td>
+                    <td colspan="2" class="capitalize text-white px-6 py-3">quote</td>
                 </tr>
             </table>
         </div>
     </main>
-
-
-
     
     <script src="assets/main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 </body>
 
 </html>

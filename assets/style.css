@@ -14,6 +14,14 @@ body {
     min-width: 100vw;
     min-height: 100vh;
 }
-.w-96{
+
+.w-96 {
     width: 52rem !important;
+}
+
+.text-indigo-700 {
+    color: #ff5722 !important;
+}
+.bg-blue-500{
+    background-color: #ff5722 !important;
 }
