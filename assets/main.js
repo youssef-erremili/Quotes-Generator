@@ -1,6 +1,6 @@
 let category = 'computers';
 let url = 'https://api.api-ninjas.com/v1/quotes?category=' + category;
-const apiKey = 'PUT-YOUR-API-KEY';
+const apiKey = 'yfixoj9cWc3s7UmBI2lGfQ==2QNByH09NUJv47SR';
 let quote = document.getElementById("quote");
 let author = document.getElementById("author");
 let saveBtn = document.getElementById("saveBtn");
