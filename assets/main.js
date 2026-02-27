@@ -1,5 +1,4 @@
-let category = 'computers';
-let url = 'https://api.api-ninjas.com/v1/quotes?category=' + category;
+let url = "https://api.api-ninjas.com/v1/quotes"
 const apiKey = 'yfixoj9cWc3s7UmBI2lGfQ==2QNByH09NUJv47SR';
 let quote = document.getElementById("quote");
 let author = document.getElementById("author");
